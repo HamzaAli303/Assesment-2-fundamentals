@@ -82,10 +82,10 @@ canWeDeliver(85201);
 // CODE HERE
 function canWeDeliverTwo(zipCode) {
     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-        zipCode === deliveryAreaZipCodes[i]
-        return `You're in our delivery zone!`
+        if (zipCode !== deliveryAreaZipCodes[i])
+            return `Sorry, we can't deliver to that address`
     }
-    return `Sorry, we can't deliver to that address`
+    return `You're in our delivery zone!`
 }
 console.log(canWeDeliverTwo(11111));
 
@@ -146,5 +146,5 @@ title = title.replace('15', '10');
 //CODE HERE
 let { desc } = deals[1];
 desc = desc.replace('March', 'April');
-desc = desc.trim(' ');
+desc = desc.trim();
 console.log(desc)

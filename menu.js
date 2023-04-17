@@ -103,14 +103,52 @@ console.log(newCategory);
 */
 
 //CODE HERE
-const foodArr = {
-    name: 'burger',
-    price: 8,
-    category: 'entree',
-    popularity: 3,
-    rating: 5,
-    tags: ['lunch', 'popular']
-}
+const foodArr = [
+    {
+        name: "burger",
+        price: 8,
+        category: "entree",
+        popularity: 3,
+        rating: 5,
+        tags: ["lunch", "popular"]
+    },
+    {
+        name: "cheese stick",
+        price: 20,
+        category: "Appetizer",
+        popularity: 1,
+        rating: 4,
+        tags: ["high-calorie", "gluten"]
+
+    },
+    {
+        name: "Pasta",
+        price: 15,
+        category: "Entree",
+        popularity: 10,
+        rating: 5,
+        tags: ["shrimp", "cheese"]
+
+    },
+    {
+        name: "nuggets",
+        price: 9,
+        category: "Appetizer",
+        popularity: 9,
+        rating: 4,
+        tags: ["cheese", "chicken"]
+    },
+    {
+        name: "Ice cream",
+        price: 5,
+        category: "Dessert",
+        popularity: 5,
+        rating: 5,
+        tags: ["Vanilla", "frozen"]
+    }
+]
+
+
 
 
 //////////////////PROBLEM 4////////////////////
@@ -127,8 +165,8 @@ const foodArr = {
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(el => el.tags[1]) // This one does not print!
-console.log(filteredFood);
+const filteredFood = foodArr.filter(el => el.tags.includes["chicken"])
+//console.log(filteredFood);
 
 
 
@@ -173,13 +211,16 @@ console.log(filteredFood);
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-    const filtered = foodArr.filter(filterByProperty)
+    const filtered = foodArr.filter(ingridients)
     if (type === 'above') {
-        return property[i] > number;
+        return ingridients[property] > number;
     }
-    return property[i] < number;
+    if (type === 'below') {
+        return ingridients[property] < number;
+    }
+    return filtered
 }
-console.log(filterByProperty(foodArr.price, 10, 'below'));
+console.log(filterByProperty('price', 10, 'below'));
 
 
 
@@ -191,3 +232,7 @@ console.log(filterByProperty(foodArr.price, 10, 'below'));
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 10, 'below'));
+console.log(filterByProperty('popularity', 7, 'above'));
+console.log(filterByProperty('rating', 5, 'above'));
+
