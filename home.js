@@ -82,12 +82,15 @@ canWeDeliver(85201);
 // CODE HERE
 function canWeDeliverTwo(zipCode) {
     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-        if (zipCode !== deliveryAreaZipCodes[i])
+        if (zipCode !== deliveryAreaZipCodes[i]) {
             return `Sorry, we can't deliver to that address`
+        } else {
+            return `You're in our delivery zone!`
+        }
+
     }
-    return `You're in our delivery zone!`
 }
-console.log(canWeDeliverTwo(11111));
+console.log(canWeDeliverTwo(85205));
 
 
 
@@ -125,8 +128,8 @@ const deals = [
 */
 
 //CODE HERE
-let { title } = deals[0]
-title = title.replace('15', '10');
+deals.title = deals[0].title.replace("15", "10")
+console.log(deals.title)
 
 
 

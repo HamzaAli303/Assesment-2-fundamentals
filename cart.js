@@ -88,12 +88,11 @@ console.log(calcFinalPrice(100, 50, .06));
 
 /*
     TEXT ANSWER HERE
-
-     => I would create 4 properties(breakfast, lunch, dinner, deserts). This will help me plan out when the story is the most busiest. 
-     => I chose breakfast to see how much people come in the mornings and how much is spent 
-     => i chose lunch to see mid day traffic and how  much is being spent around that time. 
-     => i chose dinner to see late night traffic and how much is also being purchased. 
-     => i chose desert for overall customer interactions and how much they come in to buy snacks or fun foods. 
+    I made a food function customer order
+    time: takes in the time the customer ate
+    purchasesPrice: how much the food cost 
+    typeOfFoods: what type of food they purchases 
+    drinks: what they had to drink with that
 
 */
 
@@ -103,26 +102,9 @@ console.log(calcFinalPrice(100, 50, .06));
 */
 
 //CODE HERE
-const foods = [
-    {
-        time: 'breakfast',
-        overallPurchedPrice: 100,
-        typeOfFoods: ['eggs', 'bacon', 'pancakes']
-    },
-    {
-        time: 'lunch',
-        overallPurchedPrice: 250,
-        typeOfFoods: ['cheeseburger', 'salad', 'chicken and rice bowl']
-
-    },
-    {
-        time: 'dinner',
-        overallPurchedPrice: 150,
-        typeOfFoods: ['pasta', 'steak', 'lopster']
-    },
-    {
-        time: 'deserts',
-        overallPurchedPrice: 150,
-        typeOfFoods: ['donuts', 'ice cream', 'cakes']
-    }
-]; 
+const foods = {
+    time: 'breakfast',
+    purchedPrice: 20,
+    typeOfFoods: ['eggs', 'bacon', 'pancakes'],
+    drinks: 'orange juice'
+}

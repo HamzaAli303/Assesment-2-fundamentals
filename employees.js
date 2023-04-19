@@ -25,7 +25,7 @@ class Employee {
         this.name = name
         this.shifts = shifts
     }
-    getSchedule() {
+    getSchedule(name, shifts) {
         console.log(`${this.name} works on ${this.shifts} shifts`)
     }
 
@@ -46,7 +46,7 @@ class Employee {
 */
 
 //CODE HERE
-const empOne = new Employee('Jess', 'weekdays, mornings, weekdays afternoons');
+let empOne = new Employee('Jess', 'weekdays, mornings, weekdays afternoons');
 // empOne.getSchedule(empOne.name, empOne.shifts);
 
 /*
@@ -71,7 +71,8 @@ empOne.getSchedule(empOne.name, empOne.shifts);
 */
 
 //CODE HERE
-const empTwo = { ...empOne }
+let empTwo = { ...empOne }
+empTwo.name = 'Nick';
 console.log(empTwo);
 
 
@@ -107,7 +108,7 @@ class Manager extends Employee {
 
     }
     getEmployees(name, employees) {
-        console.log(`${name} manages ${employees}`)
+        console.log(`${this.name} manages ${this.employees}`)
     }
     addEmployees(emp) {
         this.employees.push(emp)
